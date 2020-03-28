@@ -727,33 +727,36 @@ omelet 57.360 57.540 5.314 177.800
 
 Входные данные
 
-<pre>3 4
+```
+3 4
 1 2 1
 1 2 2
 1 3 3
 3 2 4
-</pre>
+```
 
 Выходные данные
 
-<pre>4
-
-</pre>
+```
+4
+```
 
 Входные данные
 
-<pre>4 5
+```
+4 5
 1 2 1
 2 3 1
 3 4 1
 4 1 1
 2 4 2
-</pre>
+```
 
 Выходные данные
 
-<pre>2
-</pre>
+```
+2
+```
 
 #### Примечание
 
@@ -768,387 +771,6 @@ omelet 57.360 57.540 5.314 177.800
 Во втором тесте ответ достигается на разбиении <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-252-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo fence="false" stretchy="false">{</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo>,</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo fence="false" stretchy="false">}</mo></math></span><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>{</mo><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>}</mo><mo>,</mo><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>{</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>}</mo><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>}</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-252">\{\{1, 3\}, \{2, 4\}\}</script>. Легко убедиться, расписав все возможные разбиения, что не существует разбиения данного графа, на котором ответ был бы больше.
 
 <a name="er"></a>
-
-<div class="spoiler">**Решение**
-
-<div class="spoiler_text">
-
-Решить задачу можно с помощью бинарного поиска по ответу.
-
-Предположим, что ответ — <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-253-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-253">x</script>. Тогда все ребра, вес которых меньше либо равен <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-254-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-254">x</script>, должны соединять вершины из разных множеств, то есть двудольным является граф, построенный на ребрах с весом, меньшим либо равным <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-255-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-255">x</script>. Покажем монотонность результата построения в зависимости от <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-256-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-256">x</script>. Так, если для некоторого <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-257-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-257">x</script> можно построить граф, удовлетворяющий условию, то граф можно построить и для всех <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-258-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo><</mo><mi>x</mi></math></span><mi>y</mi><mo>&amp;lt;</mo><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-258">y < x</script>. Это следствие того, что для <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-259-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-259">y</script> можно взять такое же разбиение на множества, как и для <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-260-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-260">x</script>, а в таком случае ребра между вершинами из одного множества будут иметь вес, больше либо равный <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-261-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>></mo><mi>y</mi></math></span><mi>x</mi><mo>&amp;gt;</mo><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-261">x > y</script>. Если же для некоторого <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-262-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-262">x</script> нельзя построить граф, удовлетворяющий условию, то его нельзя построить и для <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-263-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mo>></mo><mi>x</mi></math></span><mi>z</mi><mo>&amp;gt;</mo><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-263">z > x</script>, так как граф, построенный на ребрах весом меньше <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-264-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-264">x</script>, не является двудольным (то есть существует ребро между вершинами из одного множества), а добавлением ребер нельзя восстановить двудольность графа.
-
-Теперь опишем проверку того, что граф удовлетворяет условию, то есть является двудольным. Для этого нужно запустить обход всех вершин (например, в глубину либо в ширину) для каждой компоненты связности. Во время обхода каждой вершине нужно поставить в соответствие <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-265-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-265">0</script> либо <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-266-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-266">1</script>. Это делается так:  
-
-*   Начинаем обход с некоторой вершины, в соответствие которой ставится <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-267-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-267">0</script>.
-*   При переходе по ребру от вершины <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-268-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></span><mi>a</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-268">a</script> к вершине <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-269-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></span><mi>b</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-269">b</script> вершине <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-270-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></span><mi>b</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-270">b</script> ставится в соответствие число, противоположное поставленному в соответствие вершине <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-271-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></span><mi>a</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-271">a</script> (например, если <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-272-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>l</mi><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo><mo>=</mo><mn>0</mn></math></span><mi>v</mi><mi>a</mi><mi>l</mi><mo stretchy=&quot;false&quot;>[</mo><mi>a</mi><mo stretchy=&quot;false&quot;>]</mo><mo>=</mo><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-272">val[a] = 0</script>, то <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-273-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>l</mi><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo><mo>=</mo><mn>1</mn></math></span><mi>v</mi><mi>a</mi><mi>l</mi><mo stretchy=&quot;false&quot;>[</mo><mi>b</mi><mo stretchy=&quot;false&quot;>]</mo><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-273">val[b] = 1</script>, и наоборот).
-
-После обхода нужно проверить, что не существует ребра между вершинами, которым соответствует одно и то же число. Если это так, то заданный граф является двудольным.  
-
-Сложность одной итерации бинарного поиска равна <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-274-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-274">O(n + m)</script>, а решение целиком имеет сложность <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-275-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><mi>log</mi><mo>⁡</mo><mo movablelimits="true" form="prefix">max</mo><mi>w</mi><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mo stretchy=&quot;false&quot;>(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy=&quot;false&quot;>)</mo><mi>log</mi><mo>&amp;#x2061;</mo><mo movablelimits=&quot;true&quot; form=&quot;prefix&quot;>max</mo><mi>w</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-275">O((n + m) \log \max w)</script>.
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на Python**
-
-<div class="spoiler_text">
-
-    import sys
-
-    def bfs(g, cl, m, v):
-        qu = [v]
-        cl[v] = 1
-
-        l = 0
-        while l != len(qu):
-            v = qu[l]
-            l += 1
-
-            for u, w in g[v]:
-                if w > m:
-                    continue
-                if cl[u] == 0:
-                    cl[u] = 3 - cl[v]
-                    qu.append(u)
-                elif cl[v] == cl[u]:
-                    return False
-
-        return True
-
-    def check(g, m):
-        cl = [0 for i in range(len(g))]
-
-        for i in range(len(g)):
-            if cl[i] == 0 and not bfs(g, cl, m, i):
-                return False
-
-        return True
-
-    def main():
-        n, m = map(int, sys.stdin.readline().split())
-        ed = [tuple(map(int, sys.stdin.readline().split())) for i in range(m)]
-
-        g = [[] for i in range(n)]
-        mx = 0
-        for v, u, w in ed:
-            g[v - 1].append((u - 1, w))
-            g[u - 1].append((v - 1, w))
-            mx = max(mx, w)
-
-        if check(g, mx):
-            sys.stdout.write(str(mx) + "\n")
-            return
-
-        l = 0
-        r = mx + 1
-
-        while r - l > 1:
-            m = (l + r) // 2
-            if check(g, m):
-                l = m
-            else:
-                r = m
-
-        sys.stdout.write(str(r) + "\n")
-
-    main()
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на C++**
-
-<div class="spoiler_text">
-
-    #include <algorithm>
-    #include <string>
-    #include <iostream>
-    #include <vector>
-    #include <utility>
-
-    struct Solution {
-        int n, m;
-        std::vector<std::vector<std::pair<int, int>>> graph;
-        std::vector<int> colors;
-
-        bool dfs(int v, int color, int bound) {
-            colors[v] = color;
-            for (const auto &edge : graph[v]) {
-                if (edge.second >= bound) {
-                    continue;
-                }
-                if (colors[edge.first] == color) {
-                    return false;
-                }
-                if (colors[edge.first] == -1) {
-                    if (!dfs(edge.first, 1 - color, bound)) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        bool check(int bound) {
-            for (int i = 0; i < n; i++) {
-                if (colors[i] == -1) {
-                    if (!dfs(i, 0, bound)) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        void run(std::istream &in, std::ostream &out) {
-            in >> n >> m;
-            graph.assign(n, std::vector<std::pair<int, int>>());
-            for (int i = 0; i < m; i++) {
-                int u, v, w;
-                in >> u >> v >> w;
-                u--;
-                v--;
-                graph[u].emplace_back(v, w);
-                graph[v].emplace_back(u, w);
-            }
-            int l = 0;
-            int r = 1000000001;
-            while (r - l > 1) {
-                int m = (l + r) / 2;
-                colors.assign(n, -1);
-                if (!check(m)) {
-                    r = m;
-                } else {
-                    l = m;
-                }
-            }
-            out << l << "\n";
-        }
-    };
-
-    int main() {
-        std::cin.sync_with_stdio(false);
-        std::cin.tie(nullptr);
-        Solution().run(std::cin, std::cout);
-        return 0;
-    }
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на Java**
-
-<div class="spoiler_text">
-
-    import java.io.OutputStream;
-    import java.io.IOException;
-    import java.io.InputStream;
-    import java.io.OutputStream;
-    import java.io.PrintWriter;
-    import java.util.Arrays;
-    import java.io.BufferedWriter;
-    import java.util.InputMismatchException;
-    import java.io.IOException;
-    import java.util.ArrayList;
-    import java.util.List;
-    import java.io.Writer;
-    import java.io.OutputStreamWriter;
-    import java.io.InputStream;
-
-    /**
-     * Built using CHelper plug-in
-     * Actual solution is at the top
-     */
-    public class Graph_AD_Correct {
-        public static void main(String[] args) {
-            InputStream inputStream = System.in;
-            OutputStream outputStream = System.out;
-            InputReader in = new InputReader(inputStream);
-            OutputWriter out = new OutputWriter(outputStream);
-            Graph solver = new Graph();
-            solver.solve(1, in, out);
-            out.close();
-        }
-
-        static class Graph {
-            public void solve(int testNumber, InputReader in, OutputWriter out) {
-                int n = in.readInt();
-                int m = in.readInt();
-                //noinspection unchecked
-                List<Graph.Edge>[] g = new List[n];
-                for (int i = 0; i < n; i++) {
-                    g[i] = new ArrayList<>();
-                }
-                int left = Integer.MAX_VALUE;
-                int right = Integer.MIN_VALUE;
-                for (int i = 0; i < m; i++) {
-                    int x = in.readInt() - 1;
-                    int y = in.readInt() - 1;
-                    int w = in.readInt();
-                    g[x].add(new Graph.Edge(y, w));
-                    g[y].add(new Graph.Edge(x, w));
-                    left = Math.min(left, w);
-                    right = Math.max(right, w);
-                }
-                int[] color = new int[n];
-                int ans = -1;
-                while (left <= right) {
-                    int mid = (left + right) / 2;
-                    if (isBipartite(n, color, g, mid)) {
-                        ans = mid;
-                        left = mid + 1;
-                    } else {
-                        right = mid - 1;
-                    }
-                }
-                if (ans == -1) {
-                    throw new AssertionError();
-                }
-                out.printLine(ans);
-            }
-
-            private boolean isBipartite(int n, int[] color, List<Graph.Edge>[] g, int mid) {
-                Arrays.fill(color, -1);
-                for (int i = 0; i < n; i++) {
-                    if (color[i] == -1) {
-                        if (!dfs(i, -1, 0, color, g, mid)) {
-                            return false;
-                        }
-                    }
-                }
-                return true;
-            }
-
-            private boolean dfs(int x, int p, int curColor, int[] color, List<Graph.Edge>[] g, int mid) {
-                color[x] = curColor;
-                for (Graph.Edge e : g[x]) {
-                    if (e.w >= mid) {
-                        continue;
-                    }
-                    int y = e.to;
-                    if (y == p) {
-                        continue;
-                    }
-                    if (color[y] == color[x]) {
-                        return false;
-                    }
-                    if (color[y] == -1 && !dfs(y, x, 1 - curColor, color, g, mid)) {
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            static class Edge {
-                int to;
-                int w;
-
-                Edge(int to, int w) {
-                    this.to = to;
-                    this.w = w;
-                }
-
-            }
-
-        }
-
-        static class OutputWriter {
-            private final PrintWriter writer;
-
-            public OutputWriter(OutputStream outputStream) {
-                writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
-            }
-
-            public OutputWriter(Writer writer) {
-                this.writer = new PrintWriter(writer);
-            }
-
-            public void close() {
-                writer.close();
-            }
-
-            public void printLine(int i) {
-                writer.println(i);
-            }
-
-        }
-
-        static class InputReader {
-            private InputStream stream;
-            private byte[] buf = new byte[1024];
-            private int curChar;
-            private int numChars;
-            private InputReader.SpaceCharFilter filter;
-
-            public InputReader(InputStream stream) {
-                this.stream = stream;
-            }
-
-            public int read() {
-                if (numChars == -1) {
-                    throw new InputMismatchException();
-                }
-                if (curChar >= numChars) {
-                    curChar = 0;
-                    try {
-                        numChars = stream.read(buf);
-                    } catch (IOException e) {
-                        throw new InputMismatchException();
-                    }
-                    if (numChars <= 0) {
-                        return -1;
-                    }
-                }
-                return buf[curChar++];
-            }
-
-            public int readInt() {
-                int c = read();
-                while (isSpaceChar(c)) {
-                    c = read();
-                }
-                int sgn = 1;
-                if (c == '-') {
-                    sgn = -1;
-                    c = read();
-                }
-                int res = 0;
-                do {
-                    if (c < '0' || c > '9') {
-                        throw new InputMismatchException();
-                    }
-                    res *= 10;
-                    res += c - '0';
-                    c = read();
-                } while (!isSpaceChar(c));
-                return res * sgn;
-            }
-
-            public boolean isSpaceChar(int c) {
-                if (filter != null) {
-                    return filter.isSpaceChar(c);
-                }
-                return isWhitespace(c);
-            }
-
-            public static boolean isWhitespace(int c) {
-                return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
-            }
-
-            public interface SpaceCharFilter {
-                public boolean isSpaceChar(int ch);
-
-            }
-
-        }
-    }
-
-</div>
-
-</div>
 
 <a name="f"></a>
 
