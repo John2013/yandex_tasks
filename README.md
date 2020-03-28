@@ -575,33 +575,36 @@ omelet 57.360 57.540 5.314 177.800
 
 Входные данные
 
-<pre>1 2 1
+```
+1 2 1
 1
 1 2 1 1
-</pre>
+```
 
 Выходные данные
 
-<pre>1
-
-</pre>
+```
+1
+```
 
 Входные данные
 
-<pre>1 2 1
+```
+1 2 1
 1
 2 1 1 1
-</pre>
+```
 
 Выходные данные
 
-<pre>0
-
-</pre>
+```
+0
+```
 
 Входные данные
 
-<pre>5 5 6
+```
+5 5 6
 1 2 3 4 5
 1 2 1 1
 2 3 1 3
@@ -609,17 +612,18 @@ omelet 57.360 57.540 5.314 177.800
 2 5 1 4
 3 2 2 3
 3 2 3 3
-</pre>
+```
 
 Выходные данные
 
-<pre>1
+```
+1
 0
 1
 0
 0
 1
-</pre>
+```
 
 #### Примечание
 
@@ -638,368 +642,6 @@ omelet 57.360 57.540 5.314 177.800
 В шестом запросе требуется переместить чанк <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-199-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span><mn>3</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-199">3</script> с сервера <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-200-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span><mn>3</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-200">3</script> на сервер <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-201-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></span><mn>2</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-201">2</script>. Чанк с номером <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-202-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span><mn>3</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-202">3</script> находится на сервере <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-203-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span><mn>3</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-203">3</script>, поэтому перемещение будет произведено и расположение чанков станет описываться массивом <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-204-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></math></span><mo stretchy=&quot;false&quot;>[</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>5</mn><mo stretchy=&quot;false&quot;>]</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-204">[2, 2, 2, 2, 5]</script>.
 
 <a name="dr"></a>
-
-<div class="spoiler">**Решение и код**
-
-<div class="spoiler_text">**Первый способ**  
-
-Можно хранить для каждого сервера по одному декартову дереву, содержащему все находящиеся на нем чанки. Для этого при поступлении запроса нужно достать из декартова дерева, соответствующего вершине <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-205-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></span><mi>a</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-205">a</script>, все чанки от <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-206-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi></math></span><mi>l</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-206">l</script> до <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-207-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi></math></span><mi>r</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-207">r</script>. Это можно сделать за 2 операции Split и одну операцию Merge, то есть за <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-208-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>log</mi><mo>&amp;#x2061;</mo><mi>n</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-208">O(\log n)</script>. Далее нужно проверить количество чанков, которые удалось достать из этого сервера. Если их в точности <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-209-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mo>−</mo><mi>l</mi><mo>+</mo><mn>1</mn></math></span><mi>r</mi><mo>&amp;#x2212;</mo><mi>l</mi><mo>+</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-209">r - l + 1</script>, то валидация пройдена и нужно вывести <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-210-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-210">1</script>, если же нет, то ответ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-211-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-211">0</script>. Количество чанков можно проверить за <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-212-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mn>1</mn><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-212">O(1)</script>.  
-
-Далее в зависимости от ответа вырезанные чанки нужно вернуть либо обратно на сервер <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-213-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></span><mi>a</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-213">a</script>, либо на сервер <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-214-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></span><mi>b</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-214">b</script>. Это делается с помощью одной операции Split и двух операций Merge, то есть за сложность <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-215-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>log</mi><mo>&amp;#x2061;</mo><mi>n</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-215">O(\log n)</script>. Итоговая сложность <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-216-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>q</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>q</mi><mi>log</mi><mo>&amp;#x2061;</mo><mi>n</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-216">O(q \log n)</script>. Решение можно немного модифицировать и совершать меньше операций в случае ответа <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-217-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-217">0</script>, но асимптотически сложность это не улучшит.  
-
-<div class="spoiler">**Код на Python**
-
-<div class="spoiler_text">
-
-    import sys
-    import random
-
-    INF = 10**9 + 21
-
-    random.seed(227)
-
-    class Node(object):
-        def __init__(self, x, value):
-            self.x = x
-            self.value = value
-            self.y = random.randint(1, 10**9)
-
-            self.l = None
-            self.r = None
-
-    def merge(t1, t2):
-        if t1 is None:
-            return t2
-        if t2 is None:
-            return t1
-
-        if t1.y < t2.y:
-            t1.r = merge(t1.r, t2)
-            return t1
-        else:
-            t2.l = merge(t1, t2.l)
-            return t2
-
-    def split(t, x):
-        if t is None:
-            return None, None
-
-        if t.x < x:
-            t1, t2 = split(t.r, x)
-            t.r = t1
-            return t, t2
-        else:
-            t1, t2 = split(t.l, x)
-            t.l = t2
-            return t1, t
-
-    def add(t, nd):
-        if t is None:
-            return nd
-
-        if nd.y < t.y:
-            nd.l, nd.r = split(t, nd.x)
-            return nd
-
-        root = t;
-
-        p = None
-        last_l = False
-        while t is not None and t.y < nd.y:
-            p = t
-            if t.x < nd.x:
-                last_l = False
-                t = t.r
-            else:
-                last_l = True
-                t = t.l
-
-        if last_l:
-            p.l = nd
-        else:
-            p.r = nd
-
-        nd.l, nd.r = split(t, nd.x)
-
-        return root
-
-    def remove(t, x):
-        if t.x == x:
-            return merge(t.l, t.r)
-
-        root = t
-
-        p = None
-        last_l = False
-        while t is not None and t.x != x:
-            p = t
-            if t.x < x:
-                last_l = False
-                t = t.r
-            else:
-                last_l = True
-                t = t.l
-
-        if last_l:
-            p.l = merge(t.l, t.r)
-        else:
-            p.r = merge(t.l, t.r)
-
-        return root
-
-    def get_up(t, x):
-        cur = None
-        while t is not None:
-            if t.x >= x and (cur is None or cur.x > t.x):
-                cur = t
-
-            if t.x >= x:
-                t = t.l
-            else:
-                t = t.r
-
-        return cur
-
-    def get_down(t, x):
-        cur = None
-        while t is not None:
-            if t.x <= x and (cur is None or cur.x < t.x):
-                cur = t
-
-            if t.x >= x:
-                t = t.l
-            else:
-                t = t.r
-
-        return cur
-
-    def main():
-        n, m, q = map(int, sys.stdin.readline().split())
-        arr = list(map(int, sys.stdin.readline().split()))
-
-        tree = None
-
-        tree = add(tree, Node(0, INF))
-        tree = add(tree, Node(n + 1, INF))
-
-        for i in range(n):
-            if i == n - 1 or arr[i] != arr[i + 1]:
-                tree = add(tree, Node(i + 1, arr[i]))
-
-        ans = ["0" for i in range(q)]
-        for i in range(q):
-            a, b, l, r = map(int, sys.stdin.readline().split())
-
-            ptr1 = get_up(tree, l)
-            ptr2 = get_up(tree, r)
-
-            if ptr1 is ptr2 and ptr1.value == a:
-                pr = get_down(tree, l - 1)
-                if pr.x + 1 != l:
-                    tree = add(tree, Node(l - 1, a))
-
-                if pr.x + 1 == l and pr.value == b:
-                    tree = remove(tree, pr.x)
-
-                need_add = True
-                if r == ptr1.x:
-                    nx = get_up(tree, r + 1)
-                    if nx.value == b:
-                        need_add = False
-                    tree = remove(tree, r)
-
-                if need_add:
-                    tree = add(tree, Node(r, b))
-
-                ans[i] = "1"
-
-        sys.stdout.write("\n".join(ans) + "\n")
-
-    main()
-
-</div>
-
-</div>
-
-**Второй способ**  
-
-Также можно воспользоваться двумя деревьями отрезков c отложенным изменением: на минимум и максимум. Каждое из деревьев отрезков содержит номера серверов, на которых находится каждый из чанков. При поступлении запроса нужно проверить, что и минимум, и максимум на отрезке <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-218-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mi>l</mi><mo>,</mo><mi>r</mi><mo stretchy="false">]</mo></math></span><mo stretchy=&quot;false&quot;>[</mo><mi>l</mi><mo>,</mo><mi>r</mi><mo stretchy=&quot;false&quot;>]</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-218">[l, r]</script> равны <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-219-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></span><mi>a</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-219">a</script> – в таком случае ответ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-220-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-220">1</script>, иначе ответ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-221-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-221">0</script>. Если ответ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-222-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-222">1</script>, то нужно отложенно изменить все значения на этом отрезке на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-223-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></span><mi>b</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-223">b</script>. Итоговая сложность решения такая же: <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-224-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>q</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>q</mi><mi>log</mi><mo>&amp;#x2061;</mo><mi>n</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-224">O(q \log n)</script>.  
-
-<div class="spoiler">**Код на C++**
-
-<div class="spoiler_text">
-
-    #include <iostream>
-    #include <vector>
-
-    using namespace std;
-
-    vector<int> min_t;
-    vector<int> max_t;
-    vector<int> u;
-    int p;
-
-    inline void update(int i) {
-      if (u[i]) {
-        int l = i << 1;
-        int r = l ^ 1;
-        min_t[l] = u[i];
-        min_t[r] = u[i];
-        max_t[l] = u[i];
-        max_t[r] = u[i];
-        u[l] = u[i];
-        u[r] = u[i];
-        u[i] = 0;
-      }
-    }
-
-    pair<int, int> get(int i, int l, int r, int ll, int rr) {
-      if (r <= ll || rr <= l) {
-        return make_pair(INT32_MAX, -1);
-      }
-      if (ll <= l && r <= rr) {
-        return make_pair(min_t[i], max_t[i]);
-      }
-      update(i);
-      int m = (l + r) >> 1;
-      auto a = get(i << 1, l, m, ll, rr);
-      auto b = get((i << 1) ^ 1, m, r, ll, rr);
-      return make_pair(min(a.first, b.first), max(a.second, b.second));
-    }
-
-    void set(int i, int l, int r, int ll, int rr, int v) {
-      if (r <= ll || rr <= l) {
-        return;
-      }
-      if (ll <= l && r <= rr) {
-        min_t[i] = v;
-        max_t[i] = v;
-        u[i] = v;
-        return;
-      }
-      update(i);
-      int m = (l + r) >> 1;
-      int a = i << 1;
-      int b = (i << 1) ^ 1;
-      set(a, l, m, ll, rr, v);
-      set(b, m, r, ll, rr, v);
-      min_t[i] = min(min_t[a], min_t[b]);
-      max_t[i] = max(max_t[a], max_t[b]);
-    }
-
-    int main() {
-      ios_base::sync_with_stdio(false);
-      int n, m, q;
-      cin >> n >> m >> q;
-      p = 1;
-      while (p < n) {
-        p <<= 1;
-      }
-      min_t.resize(p << 1);
-      max_t.resize(p << 1);
-      u.resize(p << 1);
-      for (int i = 0; i < n; ++i) {
-        cin >> min_t[i + p];
-        max_t[i + p] = min_t[i + p];
-      }
-      for (int i = p - 1; i > 0; --i) {
-        min_t[i] = min(min_t[i << 1], min_t[(i << 1) ^ 1]);
-        max_t[i] = max(max_t[i << 1], max_t[(i << 1) ^ 1]);
-      }
-      while (q--) {
-        int a, b, l, r;
-        cin >> a >> b >> l >> r;
-        auto t = get(1, 0, p, --l, r);
-        if (t.first == a && t.second == a) {
-          set(1, 0, p, l, r, b);
-          cout << 1 << endl;
-        } else {
-          cout << 0 << endl;
-        }
-      }
-      return 0;
-    }
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на Python**
-
-<div class="spoiler_text">
-
-    MAX = 1000000000
-
-    n, m, q = map(int, input().split())
-    v = list(map(int, input().split()))
-
-    p = 1
-    while p < n:
-        p *= 2
-
-    min_t = [0] * (p * 2)
-    max_t = [0] * (p * 2)
-    u = [0] * (p * 2)
-    min_t[p:p+n] = v
-    max_t[p:p+n] = v
-    for i in range(p - 1, 0, -1):
-        min_t[i] = min(min_t[2 * i], min_t[2 * i + 1]);
-        max_t[i] = max(max_t[2 * i], max_t[2 * i + 1]);
-
-    def update(i):
-        if u[i] != 0 and i < p:
-            a = i * 2
-            b = a + 1
-            min_t[a] = u[i]
-            min_t[b] = u[i]
-            max_t[a] = u[i]
-            max_t[b] = u[i]
-            u[a] = u[i]
-            u[b] = u[i]
-            u[i] = 0
-
-    def get(i, l, r, ll, rr):
-        if rr <= l or r <= ll:
-            return MAX, -1
-        if ll <= l and r <= rr:
-            return min_t[i], max_t[i]
-        update(i)
-        m = (l + r) / 2
-        a, b = get(i * 2, l, m, ll, rr);
-        c, d = get(i * 2 + 1, m, r, ll, rr);
-        return min(a, c), max(b, d)
-
-    def set(i, l, r, ll, rr, v):
-        if rr <= l or r <= ll:
-            return
-        if ll <= l and r <= rr:
-            min_t[i] = max_t[i] = u[i] = v
-            return
-        update(i)
-        m = (l + r) / 2
-        set(i * 2, l, m, ll, rr, v)
-        set(i * 2 + 1, m, r, ll, rr, v)
-        min_t[i] = min(min_t[i * 2], min_t[i * 2 + 1])
-        max_t[i] = max(max_t[i * 2], max_t[i * 2 + 1])
-
-    while q > 0:
-        q -= 1
-        a, b, l, r = map(int, input().split())
-        l -= 1
-        c, d = get(1, 0, p, l, r)
-        if a == c == d:
-            print(1)
-            set(1, 0, p, l, r, b)
-        else:
-            print(0)
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 <a name="e"></a>
 
