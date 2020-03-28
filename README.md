@@ -258,61 +258,42 @@ omelet 57.360 57.540 5.314 177.800
 
 ## B. Закрытый ключ
 
-<div class="scrollable-table">
+|||
+|--------------------------------|-------------------|
+| Ограничение по времени на тест | 2 с               |
+| Ограничение по памяти на тест  | 256 МБ            |
+| Ввод                           | стандартный ввод  |
+| Вывод                          | стандартный вывод |
 
-<table>
+Во всех крупных IT-компаниях немалое внимание уделяется вопросам информационной безопасности, и 
+Яндекс  — не исключение.
 
-<tbody>
+Дима и Егор разрабатывают новый сервис YD (Yandex Dorogi) и в данный момент проводят аудит его 
+безопасности. Для шифрования пользовательских данных в YD используется алгоритм шифрования с 
+открытым ключом YS (Yandex Shifrovatel).
 
-<tr>
+Схема работы YS такова: для каждого сервиса генерируется закрытый ключ 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-11-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-11">p, q</script>), где <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-12">p</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-13">q</script> — натуральные числа. По закрытому ключу (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-14">p, q</script>) генерируется открытый ключ (НОД(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-15-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-15">p, q</script>), НОК(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-16-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-16">p, q</script>)), 
+который доступен всем пользователям. Если злоумышленник сможет по открытому ключу получить 
+закрытый ключ, то он получит доступ ко всем данным YD и принесет сервису непоправимый вред. 
+Конечно же, Егор и Дима не могут этого допустить, поэтому они хотят сделать так, чтобы 
+злоумышленнику пришлось перебрать очень много вариантов открытого ключа, прежде чем он сможет 
+его угадать.
 
-<td>Ограничение по времени на тест</td>
-
-<td>2 с</td>
-
-</tr>
-
-<tr>
-
-<td>Ограничение по памяти на тест</td>
-
-<td>256 МБ</td>
-
-</tr>
-
-<tr>
-
-<td>Ввод</td>
-
-<td>стандартный ввод</td>
-
-</tr>
-
-<tr>
-
-<td>Вывод</td>
-
-<td>стандартный вывод</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-Во всех крупных IT-компаниях немалое внимание уделяется вопросам информационной безопасности, и Яндекс  — не исключение.
-
-Дима и Егор разрабатывают новый сервис YD (Yandex Dorogi) и в данный момент проводят аудит его безопасности. Для шифрования пользовательских данных в YD используется алгоритм шифрования с открытым ключом YS (Yandex Shifrovatel).
-
-Схема работы YS такова: для каждого сервиса генерируется закрытый ключ (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-11-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-11">p, q</script>), где <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-12">p</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-13">q</script> — натуральные числа. По закрытому ключу (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-14">p, q</script>) генерируется открытый ключ (НОД(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-15-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-15">p, q</script>), НОК(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-16-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-16">p, q</script>)), который доступен всем пользователям. Если злоумышленник сможет по открытому ключу получить закрытый ключ, то он получит доступ ко всем данным YD и принесет сервису непоправимый вред. Конечно же, Егор и Дима не могут этого допустить, поэтому они хотят сделать так, чтобы злоумышленнику пришлось перебрать очень много вариантов открытого ключа, прежде чем он сможет его угадать.
-
-Дима уже сгенерировал закрытый ключ для YD и получил на его основе открытый ключ (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-17-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>,</mo><mi>y</mi></math></span><mi>x</mi><mo>,</mo><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-17">x, y</script>). Егору сразу же стало интересно, сколько вариантов закрытого ключа придется перебрать злоумышленнику для взлома YD в худшем случае, иными словами, сколько существует закрытых ключей (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-18-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-18">p, q</script>) таких, что открытым ключом для них является (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-19-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>,</mo><mi>y</mi></math></span><mi>x</mi><mo>,</mo><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-19">x, y</script>). К сожалению, у Егора есть много других задач, очень важных для запуска YD, поэтому он просит вас вычислить это количество за него.
+Дима уже сгенерировал закрытый ключ для YD и получил на его основе открытый ключ 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-17-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>,</mo><mi>y</mi></math></span><mi>x</mi><mo>,</mo><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-17">x, y</script>). 
+Егору сразу же стало интересно, сколько вариантов закрытого ключа придется перебрать 
+злоумышленнику для взлома YD в худшем случае, иными словами, сколько существует закрытых ключей 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-18-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>,</mo><mi>q</mi></math></span><mi>p</mi><mo>,</mo><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-18">p, q</script>) 
+таких, что открытым ключом для них является 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-19-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>,</mo><mi>y</mi></math></span><mi>x</mi><mo>,</mo><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-19">x, y</script>). 
+К сожалению, у Егора есть много других задач, очень важных для запуска YD, поэтому он просит вас 
+вычислить это количество за него.
 
 #### Входные данные
 
-В первой строке содержатся два целых числа <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-20-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-20">x</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-21-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-21">y</script> (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-22-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mi>y</mi><mo>≤</mo><msup><mn>10</mn><mrow class="MJX-TeXAtom-ORD"><mn>12</mn></mrow></msup></math></span><mn>1</mn><mo>&amp;#x2264;</mo><mi>x</mi><mo>&amp;#x2264;</mo><mi>y</mi><mo>&amp;#x2264;</mo><msup><mn>10</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mn>12</mn></mrow></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-22">1 \leq x \leq y \leq 10^{12}</script>) — описание открытого ключа.
+В первой строке содержатся два целых числа 
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-20-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-20">x</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-21-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-21">y</script> (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-22-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mi>y</mi><mo>≤</mo><msup><mn>10</mn><mrow class="MJX-TeXAtom-ORD"><mn>12</mn></mrow></msup></math></span><mn>1</mn><mo>&amp;#x2264;</mo><mi>x</mi><mo>&amp;#x2264;</mo><mi>y</mi><mo>&amp;#x2264;</mo><msup><mn>10</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mn>12</mn></mrow></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-22">1 \leq x \leq y \leq 10^{12}</script>) — описание открытого ключа.
 
 #### Выходные данные
 
@@ -322,418 +303,61 @@ omelet 57.360 57.540 5.314 177.800
 
 Входные данные
 
-<pre>5 10
-</pre>
+```
+5 10
+```
 
 Выходные данные
 
-<pre>2
-
-</pre>
+```
+2
+```
 
 Входные данные
 
-<pre>10 11
-</pre>
+```
+10 11
+```
 
 Выходные данные
 
-<pre>0
-
-</pre>
+```
+0
+```
 
 Входные данные
 
-<pre>527 9486
-</pre>
+```
+527 9486
+```
 
 Выходные данные
 
-<pre>4
-</pre>
+```
+4
+```
 
 #### Примечание
 
-В первом примере существует два закрытых ключа, для которых (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-23-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>,</mo><mn>10</mn></math></span><mn>5</mn><mo>,</mo><mn>10</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-23">5, 10</script>) является открытым ключом: (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-24-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>,</mo><mn>10</mn></math></span><mn>5</mn><mo>,</mo><mn>10</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-24">5, 10</script>) и (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-25-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>,</mo><mn>5</mn></math></span><mn>10</mn><mo>,</mo><mn>5</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-25">10, 5</script>).
+В первом примере существует два закрытых ключа, для которых 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-23-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>,</mo><mn>10</mn></math></span><mn>5</mn><mo>,</mo><mn>10</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-23">5, 10</script>) является открытым ключом: (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-24-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>,</mo><mn>10</mn></math></span><mn>5</mn><mo>,</mo><mn>10</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-24">5, 10</script>) 
+и 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-25-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>,</mo><mn>5</mn></math></span><mn>10</mn><mo>,</mo><mn>5</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-25">10, 5</script>).
 
-Во втором примере Дима ошибся, потому что ни один закрытый ключ не порождает открытый ключ (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-26-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>,</mo><mn>11</mn></math></span><mn>10</mn><mo>,</mo><mn>11</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-26">10, 11</script>).
+Во втором примере Дима ошибся, потому что ни один закрытый ключ не порождает открытый ключ 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-26-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>,</mo><mn>11</mn></math></span><mn>10</mn><mo>,</mo><mn>11</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-26">10, 11</script>).
 
-В третьем примере подходящими закрытыми ключами являются (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-27-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>527</mn><mo>,</mo><mn>9486</mn></math></span><mn>527</mn><mo>,</mo><mn>9486</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-27">527, 9486</script>), (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-28-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1054</mn><mo>,</mo><mn>4743</mn></math></span><mn>1054</mn><mo>,</mo><mn>4743</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-28">1054, 4743</script>), (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-29-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4743</mn><mo>,</mo><mn>1054</mn></math></span><mn>4743</mn><mo>,</mo><mn>1054</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-29">4743, 1054</script>), (<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-30-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>9486</mn><mo>,</mo><mn>527</mn></math></span><mn>9486</mn><mo>,</mo><mn>527</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-30">9486, 527</script>).
+В третьем примере подходящими закрытыми ключами являются 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-27-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>527</mn><mo>,</mo><mn>9486</mn></math></span><mn>527</mn><mo>,</mo><mn>9486</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-27">527, 9486</script>), 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-28-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1054</mn><mo>,</mo><mn>4743</mn></math></span><mn>1054</mn><mo>,</mo><mn>4743</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-28">1054, 4743</script>), 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-29-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4743</mn><mo>,</mo><mn>1054</mn></math></span><mn>4743</mn><mo>,</mo><mn>1054</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-29">4743, 1054</script>), 
+(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-30-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>9486</mn><mo>,</mo><mn>527</mn></math></span><mn>9486</mn><mo>,</mo><mn>527</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-30">9486, 527</script>).
 
 НОД (наибольшим общим делителем) двух натуральных чисел <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-31-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-31">p</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-32-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-32">q</script> называется наибольшее число <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-33-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-33">k</script> такое, что <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-34-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-34">p</script> делится на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-35-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-35">k</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-36-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-36">q</script> делится на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-37-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-37">k</script>. Например, НОД(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-38-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6</mn><mo>,</mo><mn>15</mn></math></span><mn>6</mn><mo>,</mo><mn>15</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-38">6, 15</script>) равен <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-39-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span><mn>3</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-39">3</script>, а НОД(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-40-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>16</mn><mo>,</mo><mn>8</mn></math></span><mn>16</mn><mo>,</mo><mn>8</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-40">16, 8</script>) равен <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-41-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></span><mn>8</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-41">8</script>.
 
 НОК (наименьшим общим кратным) двух натуральных чисел <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-42-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-42">p</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-43-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-43">q</script> называется наименьшее число <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-44-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-44">k</script> такое, что <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-45-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-45">k</script> делится на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-46-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-46">p</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-47-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-47">k</script> делится на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-48-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-48">q</script>. Например, НОК(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-49-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>,</mo><mn>3</mn></math></span><mn>2</mn><mo>,</mo><mn>3</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-49">2, 3</script>) равен <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-50-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6</mn></math></span><mn>6</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-50">6</script>, а НОК(<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-51-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>,</mo><mn>20</mn></math></span><mn>10</mn><mo>,</mo><mn>20</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-51">10, 20</script>) равен 20.
 
 <a name="br"></a>
-
-<div class="spoiler">**Решение и код**
-
-<div class="spoiler_text">
-
-Если <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-52-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-52">y</script> не делится на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-53-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-53">x</script>, то ответ, очевидно, равен нулю.
-
-Иначе рассмотрим какую-то пару <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-54-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span><mi>p</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-54">p</script>, <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-55-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi></math></span><mi>q</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-55">q</script>, что <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-56-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></math></span><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy=&quot;false&quot;>(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-56">gcd(p, q) = x</script>, а <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-57-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo><mo>=</mo><mi>y</mi></math></span><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy=&quot;false&quot;>(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mi>y</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-57">lcm(p, q) = y</script>. С каждой такой парой можно сопоставить два числа <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-58-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>p</mi><mo>′</mo></msup><mo>=</mo><mfrac><mi>p</mi><mi>x</mi></mfrac></math></span><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>=</mo><mfrac><mi>p</mi><mi>x</mi></mfrac></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-58">p' = \frac{p}{x}</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-59-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>q</mi><mo>′</mo></msup><mo>=</mo><mfrac><mi>q</mi><mi>x</mi></mfrac></math></span><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo>=</mo><mfrac><mi>q</mi><mi>x</mi></mfrac></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-59">q' = \frac{q}{x}</script> такие, что <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-60-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>q</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math></span><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-60">gcd(p', q') = 1</script>, а <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-61-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>q</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></math></span><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-61">lcm(p', q') = \frac{y}{x}</script>.
-
-Иными словами, задачу можно свести к задаче нахождения количества пар взаимно простых чисел <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-62-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>p</mi><mo>′</mo></msup></math></span><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-62">p'</script>, <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-63-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>q</mi><mo>′</mo></msup></math></span><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-63">q'</script> таких, что их <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-64-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>c</mi><mi>m</mi></math></span><mi>l</mi><mi>c</mi><mi>m</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-64">lcm</script> равен <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-65-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>y</mi><mi>x</mi></mfrac></math></span><mfrac><mi>y</mi><mi>x</mi></mfrac></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-65">\frac{y}{x}</script>.
-
-Далее будем предполагать что <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-66-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn></math></span><mi>x</mi><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-66">x = 1</script>, если это не так, то сводим исходную задачу к задаче <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-67-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mn>1</mn></math></span><msup><mi>x</mi><mo>&amp;#x2032;</mo></msup><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-67">x' = 1</script>, <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-68-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></math></span><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><mo>=</mo><mfrac><mi>y</mi><mi>x</mi></mfrac></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-68">y' = \frac{y}{x}</script>.
-
-**Первый вариант решения**  
-
-Решение за <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-69-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>+</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mi mathvariant="normal">_</mi><mi>o</mi><mi>f</mi><mi mathvariant="normal">_</mi><mi>d</mi><mi>i</mi><mi>v</mi><mi>i</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>s</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>⋅</mo><mi>log</mi><mo>⁡</mo><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mi>y</mi></mrow><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi><mo stretchy=&quot;false&quot;>(</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo><mo>+</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mi mathvariant=&quot;normal&quot;>&amp;#x005F;</mi><mi>o</mi><mi>f</mi><mi mathvariant=&quot;normal&quot;>&amp;#x005F;</mi><mi>d</mi><mi>i</mi><mi>v</mi><mi>i</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>s</mi><mo stretchy=&quot;false&quot;>(</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo><mo>&amp;#x22C5;</mo><mi>log</mi><mo>&amp;#x2061;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo stretchy=&quot;false&quot;>(</mo><mi>y</mi></mrow><mo stretchy=&quot;false&quot;>)</mo><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-69">O(factor(y) + number\_of\_divisors(y) \cdot \log{(y}))</script>.
-
-Зафиксируем <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-70-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>p</mi><mo>′</mo></msup></math></span><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-70">p'</script>, тогда ему в пару может подойти только <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-71-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>q</mi><mo>′</mo></msup><mo>=</mo><mfrac><msup><mi>y</mi><mo>′</mo></msup><msup><mi>p</mi><mo>′</mo></msup></mfrac></math></span><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo>=</mo><mfrac><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></mfrac></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-71">q' = \frac{y'}{p'}</script>, поскольку <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-72-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>q</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⋅</mo><msup><mi>q</mi><mo>′</mo></msup></mrow><mrow><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>q</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⋅</mo><msup><mi>q</mi><mo>′</mo></msup></mrow><mn>1</mn></mfrac><mo>=</mo><msup><mi>p</mi><mo>′</mo></msup><mo>⋅</mo><msup><mi>q</mi><mo>′</mo></msup></math></span><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><mo>=</mo><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mfrac><mrow><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>&amp;#x22C5;</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup></mrow><mrow><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>&amp;#x22C5;</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup></mrow><mn>1</mn></mfrac><mo>=</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>&amp;#x22C5;</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-72">y' = lcm(p', q') = \frac{p' \cdot q'}{gcd(p', q')} = \frac{p' \cdot q'}{1} = p' \cdot q'</script>. Единственное, что надо проверить, это равенство <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-73-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><mfrac><msup><mi>y</mi><mo>′</mo></msup><msup><mi>p</mi><mo>′</mo></msup></mfrac><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math></span><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><mfrac><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></mfrac><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-73">gcd(p', \frac{y'}{p'}) = 1</script>, это можно сделать алгоритмом Евклида за <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-74-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><msup><mi>y</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>log</mi><mo>&amp;#x2061;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo stretchy=&quot;false&quot;>(</mo><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo></mrow><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-74">O(\log{(y')})</script>.
-
-Под факторизацией подразумевается любой способ нахождения делителей. С учетом достаточно маленьких ограничений их можно найти просто проверкой всех целых чисел от <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-75-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-75">1</script> до <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-76-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><msup><mi>y</mi><mo>′</mo></msup></msqrt></math></span><msqrt><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></msqrt></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-76">\sqrt{y'}</script>, что имеет сложность <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-77-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msqrt><msup><mi>y</mi><mo>′</mo></msup></msqrt><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msqrt><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></msqrt><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-77">O(\sqrt{y'})</script>. Известно, что количество делителей точно не превосходит <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-78-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>⋅</mo><msqrt><msup><mi>y</mi><mo>′</mo></msup></msqrt></math></span><mn>2</mn><mo>&amp;#x22C5;</mo><msqrt><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></msqrt></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-78">2 \cdot \sqrt{y'}</script>, так что проверку, что <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-79-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><mfrac><msup><mi>y</mi><mo>′</mo></msup><msup><mi>p</mi><mo>′</mo></msup></mfrac><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math></span><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><mfrac><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></mfrac><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-79">gcd(p', \frac{y'}{p'}) = 1</script>, нужно выполнить не более <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-80-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>⋅</mo><msqrt><msup><mi>y</mi><mo>′</mo></msup></msqrt></math></span><mn>2</mn><mo>&amp;#x22C5;</mo><msqrt><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></msqrt></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-80">2 \cdot \sqrt{y'}</script> раз, что имеет сложность <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-81-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msqrt><msup><mi>y</mi><mo>′</mo></msup></msqrt><mi>log</mi><mo>⁡</mo><mrow class="MJX-TeXAtom-ORD"><msup><mi>y</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msqrt><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></msqrt><mi>log</mi><mo>&amp;#x2061;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></mrow><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-81">O(\sqrt{y'}\log{y'})</script>.
-
-Получаем решение за <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-82-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msqrt><mi>y</mi></msqrt><mi>log</mi><mo>⁡</mo><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msqrt><mi>y</mi></msqrt><mi>log</mi><mo>&amp;#x2061;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo stretchy=&quot;false&quot;>(</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo></mrow><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-82">O(\sqrt{y} \log{(y)})</script>.
-
-<div class="spoiler">**Код на С++**
-
-<div class="spoiler_text">
-
-    #include <stdio.h>
-    #include <iostream>
-    #include <stdlib.h>
-    #include <string>
-    #include <string.h>
-    #include <vector>
-    #include <stack>
-    #include <queue>
-    #include <deque>
-    #include <set>
-    #include <map>
-    #include <assert.h>
-    #include <algorithm>
-    #include <iomanip>
-    #include <time.h>
-    #include <math.h>
-    #include <bitset>
-
-    #pragma comment(linker, "/STACK:256000000")
-
-    using namespace std;
-
-    typedef long long int ll;
-    typedef long double ld;
-
-    const int INF = 1000 * 1000 * 1000 + 21;
-    const ll LLINF = (1ll << 60) + 5;
-    const int MOD = 1000 * 1000 * 1000 + 7;
-
-    ll gcd(ll a, ll b) {
-        return b ? gcd(b, a % b) : a;
-    }
-
-    ll x, y;
-
-    int main() {
-    #ifdef CH_EGOR
-        freopen("input.txt", "r", stdin);
-        //freopen("output.txt", "w", stdout);
-    #else
-        //freopen("", "r", stdin);
-        //freopen("", "w", stdout);
-    #endif
-
-        scanf("%lld%lld", &x, &y);
-
-        if (y % x != 0) {
-            return 0 * printf("0\n");
-        }
-
-        y /= x;
-
-        ll ans = 0;
-        for (ll i = 1; i * i <= y; ++i) {
-            if (y % i == 0) {
-                if (gcd(i, y / i) == 1) {
-                    ans += 1 + (i * i != y);
-                }
-            }
-        }
-
-        printf("%lld\n", ans);
-
-        return 0;
-    }
-
-</div>
-
-</div>
-
-**Второй вариант решения**  
-
-Решение за <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-83-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></span><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi><mo stretchy=&quot;false&quot;>(</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-83">O(factor(y))</script>.
-
-Рассмотрим простое число <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-84-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math></span><mi>z</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-84">z</script>, на которое делится <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-85-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>y</mi><mo>′</mo></msup></math></span><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-85">y'</script>. Если <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-86-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>q</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mo>=</mo><msup><mi>y</mi><mo>′</mo></msup></math></span><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-86">lcm(p', q') = y'</script>, то либо <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-87-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>p</mi><mo>′</mo></msup></math></span><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-87">p'</script>, либо <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-88-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>q</mi><mo>′</mo></msup></math></span><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-88">q'</script> должно делится на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-89-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>z</mi><mrow class="MJX-TeXAtom-ORD"><mi>α</mi></mrow></msup></math></span><msup><mi>z</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>&amp;#x03B1;</mi></mrow></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-89">z^{\alpha}</script>, где <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-90-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>α</mi></math></span><mi>&amp;#x03B1;</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-90">\alpha</script> — максимальная степень, с которой <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-91-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math></span><mi>z</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-91">z</script> входит в <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-92-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>y</mi><mo>′</mo></msup></math></span><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-92">y'</script>. Чтобы выполнялось <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-93-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy="false">(</mo><msup><mi>p</mi><mo>′</mo></msup><mo>,</mo><msup><mi>q</mi><mo>′</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math></span><mi>g</mi><mi>c</mi><mi>d</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup><mo>,</mo><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-93">gcd(p', q') = 1</script>, одно из этих чисел не должно делиться на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-94-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math></span><mi>z</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-94">z</script>.
-
-Иными словами, для каждого простого числа, на которое делится <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-95-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>y</mi><mo>′</mo></msup></math></span><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-95">y'</script>, мы выбираем, пойдет оно в <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-96-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>p</mi><mo>′</mo></msup></math></span><msup><mi>p</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-96">p'</script> или в <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-97-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>q</mi><mo>′</mo></msup></math></span><msup><mi>q</mi><mo>&amp;#x2032;</mo></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-97">q'</script>. Тогда ответ на задачу равен <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-98-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mi mathvariant="normal">_</mi><mi>o</mi><mi>f</mi><mi mathvariant="normal">_</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi mathvariant="normal">_</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>m</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>d</mi><mi>i</mi><mi>v</mi><mi>i</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>s</mi><mo stretchy="false">(</mo><msup><mi>y</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></msup></math></span><msup><mn>2</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mi mathvariant=&quot;normal&quot;>&amp;#x005F;</mi><mi>o</mi><mi>f</mi><mi mathvariant=&quot;normal&quot;>&amp;#x005F;</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi mathvariant=&quot;normal&quot;>&amp;#x005F;</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>m</mi><mi>e</mi><mi mathvariant=&quot;normal&quot;>&amp;#x005F;</mi><mi>d</mi><mi>i</mi><mi>v</mi><mi>i</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>s</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>y</mi><mo>&amp;#x2032;</mo></msup><mo stretchy=&quot;false&quot;>)</mo></mrow></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-98">2^{number\_of\_distinct\_prime\_divisors(y')}</script>.  
-
-<div class="spoiler">**Код на Python**
-
-<div class="spoiler_text">
-
-    x, y = map(int, input().split())
-
-    if y % x != 0:
-        print(0)
-    else:
-        y //= x
-
-        i = 2
-        ans = 0
-        while i * i <= y:
-            if y % i == 0:
-                ans += 1
-                while y % i == 0:
-                    y //= i
-            i += 1
-
-        if y != 1:
-            ans += 1
-
-        print(2 ** ans)
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на C++**
-
-<div class="spoiler_text">
-
-    #include <stdio.h>
-    #include <iostream>
-    #include <stdlib.h>
-    #include <string>
-    #include <string.h>
-    #include <vector>
-    #include <stack>
-    #include <queue>
-    #include <deque>
-    #include <set>
-    #include <map>
-    #include <assert.h>
-    #include <algorithm>
-    #include <iomanip>
-    #include <time.h>
-    #include <math.h>
-    #include <bitset>
-
-    #pragma comment(linker, "/STACK:256000000")
-
-    using namespace std;
-
-    typedef long long int ll;
-    typedef long double ld;
-
-    const int INF = 1000 * 1000 * 1000 + 21;
-    const ll LLINF = (1ll << 60) + 5;
-    const int MOD = 1000 * 1000 * 1000 + 7;
-
-    ll x, y;
-
-    int main() {
-    #ifdef CH_EGOR
-        freopen("input.txt", "r", stdin);
-        //freopen("output.txt", "w", stdout);
-    #else
-        //freopen("", "r", stdin);
-        //freopen("", "w", stdout);
-    #endif
-
-        scanf("%lld%lld", &x, &y);
-
-        if (y % x != 0) {
-            return 0 * printf("0\n");
-        }
-
-        y /= x;
-
-        ll ans = 0;
-        for (ll i = 2; i * i <= y; ++i) {
-            if (y % i == 0) {
-                ++ans;
-                while (y % i == 0) {
-                    y /= i;
-                }
-            }
-        }
-        ans += (y != 1);
-
-        printf("%lld\n", (1ll << ans));
-
-        return 0;
-    }
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на Java**
-
-<div class="spoiler_text">
-
-    import java.io.OutputStream;
-    import java.io.IOException;
-    import java.io.InputStream;
-    import java.io.OutputStream;
-    import java.io.PrintWriter;
-    import java.io.BufferedWriter;
-    import java.io.Writer;
-    import java.io.OutputStreamWriter;
-    import java.io.IOException;
-    import java.io.InputStream;
-
-    /**
-     * Built using CHelper plug-in
-     * Actual solution is at the top
-     *
-     * @author ch_egor
-     */
-    public class Main {
-        public static void main(String[] args) {
-            InputStream inputStream = System.in;
-            OutputStream outputStream = System.out;
-            InputReader in = new InputReader(inputStream);
-            OutputWriter out = new OutputWriter(outputStream);
-            GcdAndLcm solver = new GcdAndLcm();
-            solver.solve(1, in, out);
-            out.close();
-        }
-
-        static class GcdAndLcm {
-            public void solve(int testNumber, InputReader in, OutputWriter out) {
-                long x = in.nextLong();
-                long y = in.nextLong();
-
-                if (y % x != 0) {
-                    out.println(0);
-                    return;
-                }
-                y /= x;
-
-                long ans = 0;
-                for (long i = 2; i * i <= y; ++i) {
-                    if (y % i == 0) {
-                        ++ans;
-                        while (y % i == 0) {
-                            y /= i;
-                        }
-                    }
-                }
-                if (y != 1) {
-                    ++ans;
-                }
-
-                out.println(1L << ans);
-            }
-
-        }
-
-        static class InputReader {
-            private InputStream stream;
-            private byte[] buf = new byte[1024];
-            private int curChar;
-            private int numChars;
-            private InputReader.SpaceCharFilter filter;
-
-            public InputReader(InputStream stream) {
-                this.stream = stream;
-            }
-
-            public int read() {
-                if (numChars == -1) {
-                    throw new UnknownError();
-                }
-                if (curChar >= numChars) {
-                    curChar = 0;
-                    try {
-                        numChars = stream.read(buf);
-                    } catch (IOException e) {
-                        throw new UnknownError();
-                    }
-                    if (numChars <= 0) {
-                        return -1;
-                    }
-                }
-                return buf[curChar++];
-            }
-
-            public long nextLong() {
-                int c = read();
-                while (isSpaceChar(c)) {
-                    c = read();
-                }
-                int sgn = 1;
-                if (c == '-') {
-                    sgn = -1;
-                    c = read();
-                }
-                long res = 0;
-                do {
-                    if (c < '0' || c > '9') {
-                        throw new UnknownError();
-                    }
-                    res *= 10;
-                    res += c - '0';
-                    c = read();
-                } while (!isSpaceChar(c));
-                return res * sgn;
-            }
-
-            public boolean isSpaceChar(int c) {
-                if (filter != null) {
-                    return filter.isSpaceChar(c);
-                }
-                return isWhitespace(c);
-            }
-
-            public static boolean isWhitespace(int c) {
-                return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
-            }
-
-            public interface SpaceCharFilter {
-                public boolean isSpaceChar(int ch);
-
-            }
-
-        }
-
-        static class OutputWriter {
-            private final PrintWriter writer;
-
-            public OutputWriter(OutputStream outputStream) {
-                writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
-            }
-
-            public OutputWriter(Writer writer) {
-                this.writer = new PrintWriter(writer);
-            }
-
-            public void close() {
-                writer.close();
-            }
-
-            public void println(long i) {
-                writer.println(i);
-            }
-
-            public void println(int i) {
-                writer.println(i);
-            }
-
-        }
-    }
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 <a name="c"></a>
 
