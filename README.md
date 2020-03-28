@@ -448,31 +448,34 @@ omelet 57.360 57.540 5.314 177.800
 
 Входные данные
 
-<pre>1
+```
+1
 5
 1 2 4 8 16
-</pre>
+```
 
 Выходные данные
 
-<pre>3
-
-</pre>
+```
+3
+```
 
 Входные данные
 
-<pre>2
+```
+2
 2
 2 4
 4
 2 4 6 8
-</pre>
+```
 
 Выходные данные
 
-<pre>6
+```
+6
 2
-</pre>
+```
 
 #### Примечание
 
@@ -481,163 +484,6 @@ omelet 57.360 57.540 5.314 177.800
 В первой части второго примера Алексей может взять только лежаки со значениями 2 и 4\. Во второй части он выберет лежаки со значениями 4 и 6.
 
 <a name="cr"></a>
-
-<div class="spoiler">**Решение**
-
-<div class="spoiler_text">
-
-Зададим все числа в их двоичном представлении, дополнив ведущими нулями так, чтобы их длины были одинаковы. Далее построим на этих значениях бор, где первое от корня ребро задается старшим разрядом: спускаясь вглубь дерева, вы переходите от старших разрядов к младшим.
-
-Далее найдем все самые отдаленные от корня вершины, которые содержат ровно 2 числа. Каждой такой вершине поставим в соответствие число <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-114-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math></span><mi>z</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-114">z</script>, равное XOR между числами, которое содержит эта вершина. Тогда ответ на задачу – это минимум всех чисел <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-115-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math></span><mi>z</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-115">z</script>.
-
-Покажем, что это и правда ответ на задачу. Зададим расстояние от всех выбранных вершин до ближайших листьев числом <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-116-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-116">k</script> – оно также указывает на самый старший разряд, в котором числа отличаются (если <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-117-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mn>0</mn></math></span><mi>k</mi><mo>=</mo><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-117">k=0</script>, то числа равны). Тогда XOR между числами, принадлежащими разным сыновьям некоторой вершины, лежащей на расстоянии <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-118-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span><mi>x</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-118">x</script> от листьев, будет лежать в отрезке <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-119-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>,</mo><msup><mn>2</mn><mi>x</mi></msup><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo></math></span><mo stretchy=&quot;false&quot;>[</mo><msup><mn>2</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>&amp;#x2212;</mo><mn>1</mn></mrow></msup><mo>,</mo><msup><mn>2</mn><mi>x</mi></msup><mo>&amp;#x2212;</mo><mn>1</mn><mo stretchy=&quot;false&quot;>]</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-119">[2^{x-1}, 2^x - 1]</script> (для <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-120-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math></span><mi>x</mi><mo>=</mo><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-120">x = 0</script> ответ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-121-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span><mn>0</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-121">0</script>, ибо числа полностью совпадают, для <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-122-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn></math></span><mi>x</mi><mo>=</mo><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-122">x=1</script> ответ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-123-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span><mn>1</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-123">1</script>, ибо числа отличаются только в последнем разряде, для <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-124-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math></span><mi>x</mi><mo>=</mo><mn>2</mn></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-124">x=2</script> ответ либо 2, либо 3 и т. д.). Если же ответ задачи достигается не на выбранных нами числах, то по построению получается, что они отличаются в каком-то разряде, старше <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-125-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></span><mi>k</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-125">k</script>. В таком случае числа будут отличаются хотя бы на <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-126-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>k</mi></msup></math></span><msup><mn>2</mn><mi>k</mi></msup></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-126">2^k</script>. Получаем противоречие, ибо существует попарный XOR меньше.
-
-На самом деле, задачу можно решить без помощи бора, просто отсортировав все числа и взяв попарный XOR между соседними после сортировки числами. Ведь все числа, которые попадали в самые глубокие вершины, содержащие ровно 2 числа, являются также соседними числами после сортировки. Это действительно так, поскольку по построению бора ни одно другое число не может иметь значение из отрезка <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-127-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></math></span><mo stretchy=&quot;false&quot;>[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=&quot;false&quot;>]</mo></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-127">[a, b]</script>, где <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-128-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></span><mi>a</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-128">a</script> и <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span style="font-size: 100%; display: inline-block; position: relative;" class="MathJax_SVG" id="MathJax-Element-129-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></span><mi>b</mi></math>" role="presentation"></span><script type="math/tex" id="MathJax-Element-129">b</script> – числа из некоторой выбранной нами вершины.
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на Python**
-
-<div class="spoiler_text">
-
-    import sys
-
-    def read_int():
-        return int(sys.stdin.readline())
-
-    def read_ints():
-        return list(map(int, sys.stdin.readline().split()))
-
-    def main():
-        t = read_int()
-        for _ in range(t):
-            n = read_int()
-            a = sorted(read_ints())
-            r = a[0] ^ a[1]
-            for i in range(1, n):
-                r = min(r, a[i-1] ^ a[i])
-
-            print(r)
-
-    if __name__ == '__main__':
-        main()
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на C++**
-
-<div class="spoiler_text">
-
-    #include <algorithm>
-    #include <cstdint>
-    #include <cstdio>
-
-    using namespace std;
-
-    int main() {
-      int t;
-      scanf("%d", &t);
-      while (t--) {
-        int n;
-        scanf("%d", &n);
-        int* v = (int*) malloc(sizeof(int) * n);
-        for (int i = 0; i < n; ++i) {
-          scanf("%d", &v[i]);
-        }
-        sort(v, v + n);
-        int ans = INT32_MAX;
-        for (int i = 1; i < n; ++i) {
-          ans = min(ans, v[i] ^ v[i - 1]);
-        }
-        printf("%d\n", ans);
-      }
-      return 0;
-    }
-
-</div>
-
-</div>
-
-<div class="spoiler">**Код на Java**
-
-<div class="spoiler_text">
-
-    import java.io.OutputStream;
-    import java.io.IOException;
-    import java.io.InputStream;
-    import java.io.PrintWriter;
-    import java.util.StringTokenizer;
-    import java.util.Arrays;
-    import java.io.BufferedReader;
-    import java.io.InputStreamReader;
-    import java.io.InputStream;
-    import java.lang.Math;
-    import java.util.Scanner;
-
-    public class Main {
-        public static void main(String[] args) {
-            InputStream inputStream = System.in;
-            OutputStream outputStream = System.out;
-            Scanner in = new Scanner(inputStream);
-            PrintWriter out = new PrintWriter(outputStream);
-            PairwiseXor solver = new PairwiseXor();
-            int n = in.nextInt();
-            for (int i = 1; i <= n; ++i) {
-                solver.solve(n, in, out);
-            }
-            out.close();
-        }
-
-        static class PairwiseXor {
-            public void solve(int testNumber, Scanner in, PrintWriter out) {
-                int n = in.nextInt();
-                int[] a = new int[n];
-                for (int i = 0; i < n; ++i) {
-                    a[i] = in.nextInt();
-                }
-                Arrays.sort(a);
-                int answer = 2000000000;
-                for (int i = 1; i < n; ++i) {
-                    answer = Math.min(answer, a[i - 1] ^ a[i]);
-                }
-                out.println(answer);
-            }
-        }
-
-        static class InputReader {
-            public BufferedReader reader;
-            public StringTokenizer tokenizer;
-
-            public InputReader(InputStream stream) {
-                reader = new BufferedReader(new InputStreamReader(stream), 32768);
-                tokenizer = null;
-            }
-
-            public String next() {
-                while (tokenizer == null || !tokenizer.hasMoreTokens()) {
-                    try {
-                        tokenizer = new StringTokenizer(reader.readLine());
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-                return tokenizer.nextToken();
-            }
-
-            public int nextInt() {
-                return Integer.parseInt(next());
-            }
-
-        }
-    }
-
-</div>
-
-</div>
 
 <a name="d"></a>
 
